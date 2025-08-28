@@ -1,5 +1,6 @@
 ---
-
+import '../styles/global.css';
+import Counter from '../components/Counter.tsx';
 ---
 
 <html lang="en">
@@ -9,45 +10,15 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>HVG - Coming Soon</title>
-		<style>
-			body {
-				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-				margin: 0;
-				padding: 0;
-				min-height: 100vh;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				color: white;
-			}
-			.container {
-				text-align: center;
-				padding: 2rem;
-				max-width: 600px;
-			}
-			h1 {
-				font-size: 3rem;
-				margin-bottom: 1rem;
-				font-weight: 300;
-			}
-			p {
-				font-size: 1.2rem;
-				margin-bottom: 2rem;
-				opacity: 0.9;
-			}
-			.logo {
-				font-size: 4rem;
-				margin-bottom: 2rem;
-				opacity: 0.8;
-			}
-		</style>
 	</head>
-	<body>
-		<div class="container">
-			<div class="logo">🚀</div>
-			<h1>Coming Soon</h1>
-			<p>We're working hard to bring you something amazing. Stay tuned!</p>
+	<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-sans">
+		<div class="text-center p-8 max-w-2xl space-y-8">
+			<div class="text-6xl mb-8 opacity-80">🚀</div>
+			<h1 class="text-5xl md:text-6xl font-light mb-4">Coming Soon</h1>
+			<p class="text-xl md:text-2xl mb-8 opacity-90">We're working hard to bring you something amazing. Stay tuned!</p>
+
+			<!-- React Component Demo -->
+			<Counter client:load initialValue={0} />
 		</div>
 	</body>
 </html>
